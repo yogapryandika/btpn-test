@@ -1,0 +1,68 @@
+@import '../../../sass/main.scss';
+
+.item {
+  display: flex;
+  padding: 1.5rem 0;
+  align-items: center;
+  justify-content: space-between;
+
+  .identity {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+      box-shadow: 0 5px 8px rgba(199, 199, 199, 0.795)
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+      box-shadow: 0 5px 8px rgba(199, 199, 199, 0.795)
+    }
+
+    p {
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: #696969;
+    }
+  }
+
+  button {
+    border: none;
+    padding: .75rem;
+    color: red;
+    border-radius: 5px;
+    background-color: $color-white;
+    box-shadow: 0 2px 5px rgba(199, 199, 199, 0.795);
+    transform: translateX(70%);
+    opacity: 0;
+    visibility: hidden;
+
+
+  }
+
+  &:hover button {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .2s ease;
+
+    &:hover {
+      transform: translateY(-10%);
+      box-shadow: 0 5px 7px rgba(199, 199, 199, 0.795);
+    }
+
+    &:active {
+      transform: translateY(-5%);
+      box-shadow: 0 5px 5px rgba(199, 199, 199, 0.795);
+    }
+  }
+}

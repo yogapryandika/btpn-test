@@ -1,0 +1,42 @@
+@import '../../sass/main.scss';
+
+form {
+  width: 100%;
+
+  >button {
+    position: relative;
+    left: 50%;
+    padding: 5px 1rem;
+    border: none;
+    border-radius: 3px;
+    transform: translateX(-50%);
+    background-color: #173F5f;
+    color: $color-white;
+
+    :disabled {
+      background-color: $color-light-gray;
+    }
+  }
+
+  .form {
+    &__group {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      >label {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      >input {
+        display: block;
+        padding: 5px;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: 6px;
+        width: 100%;
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../sass/main.scss";
+
+.contacts {
+  display: flex;
+  width: 70%;
+  height: 90%;
+  background-color: $color-white;
+  border-radius: 1.25rem;
+  box-shadow: 2px 23px 70px 0px rgb(197, 197, 197);
+
+  &__list {
+    border-right: 1px solid $color-light-gray;
+    height: 100%;
+    width: 35%;
+
+    &_head {
+      height: 10rem;
+      padding-top: 1.25rem;
+      padding-left: 1.5rem;
+      border-top-left-radius: 1.25rem;
+      background-color: #709cfc;
+
+      p {
+        color: $color-white;
+        font-size: 2.5rem;
+      }
+
+      >input {
+        margin-top: 5px;
+        border-radius: 5px;
+        width: 85%;
+        font-size: 1.35rem;
+        border: none;
+        opacity: .5;
+        padding: 10px 10px 10px 10px;
+        transition: all .1s ease;
+
+        &:focus {
+          outline: none;
+          width: 90%;
+          box-shadow: 0 0.5rem 1rem rgba(#000, 0.3);
+          transform: translateY(-5px);
+        }
+      }
+    }
+
+    &_body {
+      padding: 0 1.5rem;
+      height: 85%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+
+      .contactItem:not(:first-child) {
+        border-top: 1px solid $color-light-gray;
+      }
+
+      .button__Add {
+        border: none;
+        top: 85vh;
+        left: 34%;
+        background-color: #709cfc;
+        box-shadow: 0 0.5rem 1rem rgba(#000, 0.3);
+        color: $color-white;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        position: absolute;
+        padding: 1.5rem;
+        transition: all .2s ease;
+
+        &:hover {
+          transform: translateY(-5%);
+
+          &:active {
+            transform: translateY(-2%);
+          }
+        }
+      }
+    }
+  }
+}
