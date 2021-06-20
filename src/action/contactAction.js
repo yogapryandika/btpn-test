@@ -15,7 +15,7 @@ import {
 
 import axios from 'axios';
 
-const baseURL = process.env.REACT_APP_API_BASE_URL
+const baseURL = "https://simple-contact-crud.herokuapp.com"
 
 export const getContacts = () => async (dispatch) => {
   try {
